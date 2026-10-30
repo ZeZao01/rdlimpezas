@@ -1,4 +1,5 @@
 import Button from '../../components/ui/Button'
+import { asset } from '../../lib/asset'
 import { IconArrow, IconCheck, IconShield, IconSparkle, IconUsers, IconWhatsApp } from '../../components/ui/Icons'
 import { differentials, process } from '../../data/site'
 import { useReveal } from '../../hooks/useReveal'
@@ -55,7 +56,7 @@ export default function Sobre() {
             </div>
           </div>
           <div className="animate-fade-up overflow-hidden rounded-[2rem] shadow-soft [animation-delay:120ms]">
-            <img src="/images/sobre-equipe.jpg" alt="Equipe da RD Limpezas" className="h-96 w-full object-cover lg:h-[520px]" />
+            <img src={asset('/images/sobre-equipe.jpg')} alt="Equipe da RD Limpezas" className="h-96 w-full object-cover lg:h-[520px]" />
           </div>
         </div>
       </section>

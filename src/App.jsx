@@ -42,7 +42,7 @@ function SitePage({ children }) {
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
         <Routes>
           <Route path="/" element={<SitePage><Home /></SitePage>} />
           <Route path="/servicos" element={<SitePage><Servicos /></SitePage>} />

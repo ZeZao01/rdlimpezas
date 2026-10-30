@@ -1,3 +1,5 @@
+import { asset } from '../../lib/asset'
+
 const base = 'h-5 w-5'
 
 export function IconSparkle({ className = base }) {
@@ -169,7 +171,7 @@ export function IconClose({ className = base }) {
 export function Logo({ className = 'h-10 w-10' }) {
   return (
     <img
-      src="/images/logo-rd-256.png"
+      src={asset('/images/logo-rd-256.png')}
       alt="RD Limpezas"
       className={`${className} rounded-full object-contain`}
     />

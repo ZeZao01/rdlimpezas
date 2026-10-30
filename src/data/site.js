@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 export const services = [
   {
     slug: 'limpeza-residencial',
@@ -6,7 +8,7 @@ export const services = [
     description:
       'Cuidamos da sua casa com o mesmo cuidado que você teria. Trabalhamos com limpeza pesada, rotina semanal ou quinzenal, organização de ambientes e cuidados especiais com áreas molhadas, cozinhas e dormitórios.',
     items: ['Faxina completa', 'Limpeza de rotina', 'Organização de ambientes', 'Pós-mudança'],
-    image: '/images/servico-condominio.jpg',
+    image: asset('/images/servico-condominio.jpg'),
     icon: 'home',
   },
   {
@@ -16,7 +18,7 @@ export const services = [
     description:
       'Ambientes profissionais limpos elevam a produtividade e a imagem da sua marca. Atuamos com equipes treinadas, produtos profissionais e horários flexíveis, incluindo períodos noturnos e fins de semana.',
     items: ['Escritórios e lojas', 'Clínicas e consultórios', 'Áreas comuns corporativas', 'Equipe fixa ou avulsa'],
-    image: '/images/servico-empresarial.jpg',
+    image: asset('/images/servico-empresarial.jpg'),
     icon: 'building',
   },
   {
@@ -26,7 +28,7 @@ export const services = [
     description:
       'A entrega de uma obra exige acabamento impecável. Nossa equipe remove poeira de construção, respingos de tinta, resíduos de argamassa e protege revestimentos sensíveis para a entrega final ao cliente.',
     items: ['Remoção de poeira fina', 'Limpeza de revestimentos', 'Vidros e esquadrias', 'Entrega final'],
-    image: '/images/servico-pos-obra.jpg',
+    image: asset('/images/servico-pos-obra.jpg'),
     icon: 'brush',
   },
   {
@@ -36,7 +38,7 @@ export const services = [
     description:
       'Síndicos e administradoras confiam na RD para a conservação diária das áreas comuns. Trabalhamos com planos mensais, equipe identificada e relatórios de execução para transparência total.',
     items: ['Halls e corredores', 'Elevadores e escadas', 'Garagens e depósitos', 'Áreas de lazer'],
-    image: '/images/servico-condominio.jpg',
+    image: asset('/images/servico-condominio.jpg'),
     icon: 'building',
   },
   {
@@ -46,7 +48,7 @@ export const services = [
     description:
       'Fachadas limpas valorizam o imóvel e a marca. Utilizamos equipamentos de alta pressão, produtos específicos para cada revestimento e técnicas seguras para vidros, granito, acrílico e alvenaria.',
     items: ['Vidros e esquadrias', 'Granito e porcelanato', 'Acrílico e ACM', 'Lavagem de alta pressão'],
-    image: '/images/servico-fachada.jpg',
+    image: asset('/images/servico-fachada.jpg'),
     icon: 'sparkle',
   },
   {
@@ -56,7 +58,7 @@ export const services = [
     description:
       'Renovamos estofados com injeção-extração profissional, removendo sujeira, ácaros e odores. Ideal para residências, escritórios, hotéis, restaurantes e ambientes com alto fluxo.',
     items: ['Sofás e poltronas', 'Colchões', 'Cadeiras e banquetas', 'Carpetes e tapetes'],
-    image: '/images/servico-empresarial.jpg',
+    image: asset('/images/servico-empresarial.jpg'),
     icon: 'brush',
   },
   {
@@ -66,7 +68,7 @@ export const services = [
     description:
       'Realizamos a limpeza e desinfecção de caixas d’água residenciais e prediais seguindo as normas da Vigilância Sanitária, com emissão de laudo de execução para o condomínio ou empresa.',
     items: ['Limpeza mecânica', 'Desinfecção', 'Lavagem das paredes', 'Laudo de execução'],
-    image: '/images/servico-pos-obra.jpg',
+    image: asset('/images/servico-pos-obra.jpg'),
     icon: 'shield',
   },
   {
@@ -76,7 +78,7 @@ export const services = [
     description:
       'Programas de conservação sob medida para empresas, condomínios e indústrias. Definimos frequência, checklist de execução e equipe responsável para manter o ambiente sempre no padrão.',
     items: ['Planos mensais', 'Checklist de execução', 'Equipe dedicada', 'Relatórios periódicos'],
-    image: '/images/servico-empresarial.jpg',
+    image: asset('/images/servico-empresarial.jpg'),
     icon: 'clock',
   },
   {
@@ -86,7 +88,7 @@ export const services = [
     description:
       'Terceirize a sua limpeza com segurança: recrutamos, treinamos e supervisionamos a equipe, assumindo a gestão completa do serviço com substituição garantida e cumprimento de escala.',
     items: ['Equipe treinada', 'Gestão de escala', 'Uniformização', 'Supervisão contínua'],
-    image: '/images/servico-fachada.jpg',
+    image: asset('/images/servico-fachada.jpg'),
     icon: 'users',
   },
   {
@@ -96,7 +98,7 @@ export const services = [
     description:
       'Quando o seu colaborador falta, a RD entra em campo. Cobrimos folgas, férias, atestados e licenças com profissionais preparados, mantendo o padrão de limpeza do seu contrato sem interrupções.',
     items: ['Substituição imediata', 'Sem burocracia', 'Mesmo padrão de qualidade', 'Atendimento de urgência'],
-    image: '/images/hero-equipe-limpeza.jpg',
+    image: asset('/images/hero-equipe-limpeza.jpg'),
     icon: 'truck',
   },
 ]

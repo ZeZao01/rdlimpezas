@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { asset } from '../../lib/asset'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import Button from '../../components/ui/Button'
@@ -39,7 +40,7 @@ export default function Login() {
     <div className="flex min-h-screen bg-ink-50">
       <div className="relative hidden w-1/2 overflow-hidden bg-ink-950 lg:block">
         <img
-          src="/images/hero-equipe-limpeza.jpg"
+          src={asset('/images/hero-equipe-limpeza.jpg')}
           alt=""
           className="absolute inset-0 h-full w-full object-cover opacity-40"
         />

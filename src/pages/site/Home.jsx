@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { asset } from '../../lib/asset'
 import { Link } from 'react-router-dom'
 import Button from '../../components/ui/Button'
 import {
@@ -86,7 +87,7 @@ function Hero() {
         <div className="relative animate-fade-up [animation-delay:120ms]">
           <div className="relative overflow-hidden rounded-[2rem] shadow-soft">
             <img
-              src="/images/hero-equipe-limpeza.jpg"
+              src={asset('/images/hero-equipe-limpeza.jpg')}
               alt="Equipe da RD Limpezas em atendimento profissional"
               className="h-[380px] w-full object-cover sm:h-[480px]"
               loading="eager"
@@ -327,7 +328,7 @@ function CoverageSection() {
         </div>
         <div className="relative overflow-hidden rounded-3xl">
           <img
-            src="/images/servico-fachada.jpg"
+            src={asset('/images/servico-fachada.jpg')}
             alt="Limpeza de fachada profissional"
             className="h-80 w-full object-cover lg:h-[420px]"
             loading="lazy"
