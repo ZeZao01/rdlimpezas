@@ -4,3 +4,4 @@ node_modules/
 .integrations.json.bak
 .chat-history.json
 .chat-history.json.bak
+dist/
