@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Button from '../../components/ui/Button'
 import { IconArrow, IconCheck, IconWhatsApp } from '../../components/ui/Icons'
 import { services } from '../../data/site'
+import { srcsetFor } from '../../lib/asset'
 import { useReveal } from '../../hooks/useReveal'
 
 function PageHeader({ eyebrow, title, description }) {
@@ -76,7 +77,15 @@ export default function Servicos() {
                 </div>
               </div>
               <div className="animate-fade-up overflow-hidden rounded-[2rem] shadow-soft [animation-delay:100ms]">
-                <img src={service.image} alt={service.title} className="h-80 w-full object-cover lg:h-[460px]" />
+                <img
+                  src={service.image}
+                  srcSet={srcsetFor(service.image)}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  alt={service.title}
+                  className="h-80 w-full object-cover lg:h-[460px]"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           ))}

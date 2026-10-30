@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { asset } from '../../lib/asset'
+import { asset, srcsetFor } from '../../lib/asset'
 import { Link } from 'react-router-dom'
 import Button from '../../components/ui/Button'
 import {
@@ -88,9 +88,12 @@ function Hero() {
           <div className="relative overflow-hidden rounded-[2rem] shadow-soft">
             <img
               src={asset('/images/hero-equipe-limpeza.jpg')}
+              srcSet={srcsetFor(asset('/images/hero-equipe-limpeza.jpg'))}
+              sizes="(min-width: 1024px) 50vw, 100vw"
               alt="Equipe da RD Limpezas em atendimento profissional"
               className="h-[380px] w-full object-cover sm:h-[480px]"
               loading="eager"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink-950/50 via-transparent to-transparent" />
           </div>
@@ -158,9 +161,12 @@ function ServicesSection() {
               <div className="relative h-44 overflow-hidden">
                 <img
                   src={service.image}
+                  srcSet={srcsetFor(service.image)}
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   alt={service.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/40 to-transparent" />
                 <div className="absolute bottom-3 left-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-white/95 text-brand-700 shadow-card">
@@ -329,9 +335,12 @@ function CoverageSection() {
         <div className="relative overflow-hidden rounded-3xl">
           <img
             src={asset('/images/servico-fachada.jpg')}
+            srcSet={srcsetFor(asset('/images/servico-fachada.jpg'))}
+            sizes="(min-width: 1024px) 50vw, 100vw"
             alt="Limpeza de fachada profissional"
             className="h-80 w-full object-cover lg:h-[420px]"
             loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-brand-700/30 to-transparent" />
         </div>

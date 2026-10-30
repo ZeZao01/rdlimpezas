@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { asset } from '../../lib/asset'
+import { asset, srcsetFor } from '../../lib/asset'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import Button from '../../components/ui/Button'
@@ -41,8 +41,12 @@ export default function Login() {
       <div className="relative hidden w-1/2 overflow-hidden bg-ink-950 lg:block">
         <img
           src={asset('/images/hero-equipe-limpeza.jpg')}
+          srcSet={srcsetFor(asset('/images/hero-equipe-limpeza.jpg'))}
+          sizes="50vw"
           alt=""
           className="absolute inset-0 h-full w-full object-cover opacity-40"
+          loading="lazy"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-tr from-ink-950 via-ink-950/80 to-brand-800/40" />
         <div className="relative flex h-full flex-col justify-between p-12">
