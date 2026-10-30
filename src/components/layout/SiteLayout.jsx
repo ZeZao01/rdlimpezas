@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import Button from '../ui/Button'
-import { IconArrow, IconClose, IconMenu, IconWhatsApp, LogoFull } from '../ui/Icons'
+import { IconArrow, IconClose, IconInstagram, IconMenu, IconPhone, IconWhatsApp, LogoFull } from '../ui/Icons'
 
 const navLinks = [
   { to: '/', label: 'Início' },
@@ -56,7 +56,7 @@ function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-2.5 lg:flex">
-          <Button as="a" href="https://wa.me/5548999999999" variant="secondary" size="sm">
+          <Button as="a" href="https://wa.me/5548991097803" variant="secondary" size="sm">
             <IconWhatsApp className="h-4 w-4 text-mint-500" />
             WhatsApp
           </Button>
@@ -94,7 +94,7 @@ function Navbar() {
               </NavLink>
             ))}
             <div className="grid grid-cols-2 gap-2 pt-2">
-              <Button as="a" href="https://wa.me/5548999999999" variant="secondary">
+              <Button as="a" href="https://wa.me/5548991097803" variant="secondary">
                 WhatsApp
               </Button>
               <Button as="link" to="/orcamento">
@@ -150,11 +150,12 @@ function Footer() {
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-white">Serviços</h3>
             <ul className="mt-4 space-y-2.5 text-sm text-ink-400">
-              <li>Limpeza residencial e empresarial</li>
-              <li>Limpeza pós-obra e pesada</li>
-              <li>Fachadas, estofados e caixas d&apos;água</li>
-              <li>Conservação de ambientes</li>
-              <li>Serviços terceirizados e cobertura de folgas</li>
+              <li>Limpeza residencial</li>
+              <li>Limpeza empresarial e comercial</li>
+              <li>Terceirização de limpeza</li>
+              <li>Limpeza de condomínios</li>
+              <li>Limpeza pesada e pós-obra</li>
+              <li>Vidros e áreas externas</li>
             </ul>
           </div>
 
@@ -162,18 +163,24 @@ function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-wider text-white">Contato</h3>
             <ul className="mt-4 space-y-3 text-sm text-ink-400">
               <li>
-                <a href="https://wa.me/5548999999999" className="inline-flex items-center gap-2 transition-colors hover:text-brand-300">
+                <a href="https://wa.me/5548991097803" className="inline-flex items-center gap-2 transition-colors hover:text-brand-300">
                   <IconWhatsApp className="h-4 w-4 text-mint-400" />
-                  (48) 99999-9999
+                  Comercial: (48) 99109-7803
                 </a>
               </li>
               <li>
-                <a href="mailto:contato@rdlimpezas.com.br" className="inline-flex items-center gap-2 transition-colors hover:text-brand-300">
-                  contato@rdlimpezas.com.br
+                <a href="tel:+554899219434" className="inline-flex items-center gap-2 transition-colors hover:text-brand-300">
+                  <IconPhone className="h-4 w-4 text-brand-300" />
+                  Financeiro: (48) 9921-9434
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/rdlimpezas_" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition-colors hover:text-brand-300">
+                  <IconInstagram className="h-4 w-4 text-brand-300" />
+                  @rdlimpezas_
                 </a>
               </li>
               <li>Tubarão — SC e região</li>
-              <li>Segunda a sexta, 8h às 18h</li>
             </ul>
             <Button as="link" to="/orcamento" variant="mint" size="sm" className="mt-5">
               Pedir orçamento gratuito

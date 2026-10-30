@@ -16,16 +16,11 @@ import { formatBRL, formatDate, serviceTypeLabel, statusOrderLabel } from '../..
 
 const serviceTypes = [
   { value: 'residencial', label: 'Limpeza residencial' },
-  { value: 'empresarial', label: 'Limpeza empresarial' },
-  { value: 'pos_obra', label: 'Limpeza pós-obra' },
-  { value: 'condominio', label: 'Condomínio' },
-  { value: 'fachada', label: 'Fachada' },
-  { value: 'estofados', label: 'Estofados' },
-  { value: 'caixa_agua', label: "Caixa d'água" },
-  { value: 'pesada', label: 'Limpeza pesada' },
-  { value: 'conservacao', label: 'Conservação' },
-  { value: 'terceirizado', label: 'Terceirizado' },
-  { value: 'cobertura', label: 'Cobertura de folga' },
+  { value: 'empresarial', label: 'Limpeza empresarial e comercial' },
+  { value: 'terceirizado', label: 'Terceirização de limpeza' },
+  { value: 'condominio', label: 'Limpeza de condomínios' },
+  { value: 'pos_obra', label: 'Limpeza pesada e pós-obra' },
+  { value: 'vidros', label: 'Vidros e áreas externas' },
   { value: 'outro', label: 'Outro' },
 ]
 

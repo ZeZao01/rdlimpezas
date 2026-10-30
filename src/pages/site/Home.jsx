@@ -32,7 +32,7 @@ const iconMap = {
 const stats = [
   { value: '4', suffix: ' anos', label: 'de atuação em Tubarão e região' },
   { value: '100%', suffix: '', label: 'de serviços com nota fiscal' },
-  { value: '10', suffix: '+', label: 'tipos de serviço especializados' },
+  { value: '6', suffix: '', label: 'especialidades em limpeza profissional' },
   { value: '24h', suffix: '', label: 'para retorno de orçamentos' },
 ]
 
@@ -136,8 +136,8 @@ function ServicesSection() {
             Soluções completas para cada tipo de ambiente
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-ink-600">
-            Da casa ao condomínio, da fachada ao pós-obra: atuamos com todos os tipos de limpeza, incluindo limpezas
-            pesadas e serviços terceirizados.
+            Da casa ao condomínio, dos vidros ao pós-obra: atuamos com limpeza residencial, empresarial e comercial,
+            terceirização e limpeza pesada.
           </p>
         </div>
         <Button as="link" to="/servicos" variant="secondary">
@@ -414,7 +414,7 @@ function CtaSection() {
             Quero um orçamento
             <IconArrow className="h-5 w-5" />
           </Button>
-          <Button as="a" href="https://wa.me/5548999999999" variant="secondary" size="lg">
+          <Button as="a" href="https://wa.me/5548991097803" variant="secondary" size="lg">
             <IconWhatsApp className="h-5 w-5 text-mint-500" />
             Chamar no WhatsApp
           </Button>

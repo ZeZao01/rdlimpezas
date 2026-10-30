@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Button from '../../components/ui/Button'
 import { Field, Input, Textarea } from '../../components/ui/Field'
 import { Alert, Toast } from '../../components/ui/Feedback'
-import { IconArrow, IconClock, IconMail, IconPin, IconPhone, IconWhatsApp } from '../../components/ui/Icons'
+import { IconArrow, IconClock, IconInstagram, IconPin, IconPhone, IconWhatsApp } from '../../components/ui/Icons'
 import { createLead } from '../../lib/queries'
 import { formatPhone } from '../../lib/format'
 import { useReveal } from '../../hooks/useReveal'
@@ -10,26 +10,26 @@ import { useReveal } from '../../hooks/useReveal'
 const contactChannels = [
   {
     icon: IconWhatsApp,
-    title: 'WhatsApp',
-    description: 'Atendimento rápido e direto com nossa equipe.',
-    value: '(48) 99999-9999',
-    href: 'https://wa.me/5548999999999',
+    title: 'Comercial / WhatsApp',
+    description: 'Orçamentos, visitas técnicas e agendamentos.',
+    value: '(48) 99109-7803',
+    href: 'https://wa.me/5548991097803',
     tone: 'mint',
   },
   {
     icon: IconPhone,
-    title: 'Telefone',
-    description: 'Segunda a sexta, das 8h às 18h.',
-    value: '(48) 99999-9999',
-    href: 'tel:+5548999999999',
+    title: 'Financeiro',
+    description: 'Faturas, contratos e assuntos administrativos.',
+    value: '(48) 9921-9434',
+    href: 'tel:+554899219434',
     tone: 'brand',
   },
   {
-    icon: IconMail,
-    title: 'E-mail',
-    description: 'Para propostas, contratos e documentos.',
-    value: 'contato@rdlimpezas.com.br',
-    href: 'mailto:contato@rdlimpezas.com.br',
+    icon: IconInstagram,
+    title: 'Instagram',
+    description: 'Acompanhe nossos trabalhos e novidades.',
+    value: '@rdlimpezas_',
+    href: 'https://instagram.com/rdlimpezas_',
     tone: 'brand',
   },
   {

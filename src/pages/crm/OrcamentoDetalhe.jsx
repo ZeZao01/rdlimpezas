@@ -52,7 +52,7 @@ export default function OrcamentoDetalhe() {
     const { error: err } = await createOrder({
       client_id: quote.client_id,
       quote_id: quote.id,
-      tipo_servico: 'conservacao',
+      tipo_servico: 'empresarial',
       endereco: quote.clients?.endereco || null,
       data_agendada: new Date().toISOString().slice(0, 10),
       horario: '08:00',

@@ -26,7 +26,7 @@ export default function Servicos() {
       <PageHeader
         eyebrow="Nossos serviços"
         title="Todos os tipos de limpeza, com padrão profissional"
-        description="Atuamos com limpeza residencial, empresarial, pós-obra, condomínios, limpezas pesadas, fachadas, estofados, caixas d'água, conservação de ambientes, serviços terceirizados e cobertura de folgas e atestados."
+        description="Atuamos com limpeza residencial, empresarial e comercial, terceirização de limpeza, condomínios, limpeza pesada e pós-obra, vidros e áreas externas — para empresas, escritórios, clínicas, lojas, condomínios e construtoras em Tubarão e região."
       />
 
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
@@ -69,7 +69,7 @@ export default function Servicos() {
                     Orçar este serviço
                     <IconArrow className="h-4 w-4" />
                   </Button>
-                  <Button as="a" href="https://wa.me/5548999999999" variant="secondary">
+                  <Button as="a" href="https://wa.me/5548991097803" variant="secondary">
                     <IconWhatsApp className="h-4 w-4 text-mint-500" />
                     Tirar dúvida
                   </Button>

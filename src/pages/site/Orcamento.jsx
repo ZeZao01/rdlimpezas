@@ -9,16 +9,11 @@ import { useReveal } from '../../hooks/useReveal'
 
 const serviceOptions = [
   { value: 'residencial', label: 'Limpeza residencial' },
-  { value: 'empresarial', label: 'Limpeza empresarial' },
-  { value: 'pos_obra', label: 'Limpeza pós-obra' },
-  { value: 'condominio', label: 'Limpeza de condomínio' },
-  { value: 'fachada', label: 'Limpeza de fachada' },
-  { value: 'estofados', label: 'Higienização de estofados' },
-  { value: 'caixa_agua', label: "Limpeza de caixa d'água" },
-  { value: 'pesada', label: 'Limpeza pesada' },
-  { value: 'conservacao', label: 'Conservação de ambientes' },
-  { value: 'terceirizado', label: 'Serviço terceirizado' },
-  { value: 'cobertura', label: 'Cobertura de folga/atestado' },
+  { value: 'empresarial', label: 'Limpeza empresarial e comercial' },
+  { value: 'terceirizado', label: 'Terceirização de limpeza' },
+  { value: 'condominio', label: 'Limpeza de condomínios' },
+  { value: 'pos_obra', label: 'Limpeza pesada e pós-obra' },
+  { value: 'vidros', label: 'Vidros e áreas externas' },
   { value: 'outro', label: 'Outro serviço' },
 ]
 
@@ -261,7 +256,7 @@ export default function Orcamento() {
               <p className="mt-2 text-sm leading-relaxed text-ink-500">
                 Chame nossa equipe no WhatsApp para um atendimento imediato e visita técnica sem compromisso.
               </p>
-              <Button as="a" href="https://wa.me/5548999999999" variant="mint" className="mt-5 w-full">
+              <Button as="a" href="https://wa.me/5548991097803" variant="mint" className="mt-5 w-full">
                 Chamar no WhatsApp
               </Button>
             </div>

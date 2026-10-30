@@ -41,9 +41,9 @@ export default function Sobre() {
               para atender diferentes necessidades com eficiência e responsabilidade.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-ink-600">
-              Atuamos com todos os tipos de limpeza, incluindo limpezas pesadas, fachadas, estofados, caixas d&apos;água,
-              conservação de ambientes, limpeza interna e externa, além de serviços terceirizados e cobertura de folgas
-              e atestados.
+              Atuamos com limpeza residencial, empresarial e comercial, terceirização de limpeza, condomínios, limpeza
+              pesada e pós-obra, vidros e áreas externas — sempre com equipe qualificada, produtos e equipamentos
+              adequados e compromisso com os prazos.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button as="link" to="/orcamento">
@@ -144,7 +144,7 @@ export default function Sobre() {
               Solicitar orçamento
               <IconArrow className="h-4 w-4" />
             </Button>
-            <Button as="a" href="https://wa.me/5548999999999" variant="secondary">
+            <Button as="a" href="https://wa.me/5548991097803" variant="secondary">
               <IconWhatsApp className="h-4 w-4 text-mint-500" />
               WhatsApp
             </Button>

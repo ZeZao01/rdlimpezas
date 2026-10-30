@@ -74,17 +74,12 @@ export function statusLeadLabel(status) {
 export function serviceTypeLabel(type) {
   return (
     {
-      residencial: 'Residencial',
-      empresarial: 'Empresarial',
-      pos_obra: 'Pós-obra',
-      condominio: 'Condomínio',
-      fachada: 'Fachada',
-      estofados: 'Estofados',
-      caixa_agua: "Caixa d'água",
-      pesada: 'Limpeza pesada',
-      conservacao: 'Conservação',
-      terceirizado: 'Terceirizado',
-      cobertura: 'Cobertura de folgas',
+      residencial: 'Limpeza residencial',
+      empresarial: 'Limpeza empresarial e comercial',
+      terceirizado: 'Terceirização de limpeza',
+      condominio: 'Limpeza de condomínios',
+      pos_obra: 'Limpeza pesada e pós-obra',
+      vidros: 'Vidros e áreas externas',
       outro: 'Outro',
     }[type] || type
   )

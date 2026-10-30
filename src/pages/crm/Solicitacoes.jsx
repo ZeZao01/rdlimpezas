@@ -12,13 +12,8 @@ const tipoMap = {
   empresarial: 'empresarial',
   condominio: 'condominio',
   pos_obra: 'outro',
-  fachada: 'outro',
-  estofados: 'outro',
-  caixa_agua: 'outro',
-  pesada: 'outro',
-  conservacao: 'outro',
+  vidros: 'outro',
   terceirizado: 'empresarial',
-  cobertura: 'empresarial',
   outro: 'outro',
 }
 
