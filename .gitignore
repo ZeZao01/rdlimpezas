@@ -1,0 +1,6 @@
+node_modules/
+.env
+.integrations.json
+.integrations.json.bak
+.chat-history.json
+.chat-history.json.bak
