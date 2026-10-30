@@ -17,7 +17,7 @@ export async function createLead(payload) {
   if (!isSupabaseConfigured || !supabase) {
     return { data: null, error: { message: 'Não foi possível enviar sua solicitação. Tente novamente mais tarde.' } }
   }
-  const { data, error } = await supabase.from('leads').insert(payload).select().single()
+  const { data, error } = await supabase.rpc('submit_lead', { p_lead: payload })
   return { data, error }
 }
 
