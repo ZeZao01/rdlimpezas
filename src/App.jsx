@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Navigate, Route, BrowserRouter, Routes } from 'react-router-dom'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import SiteLayout from './components/layout/SiteLayout'
@@ -6,15 +7,17 @@ import Servicos from './pages/site/Servicos'
 import Sobre from './pages/site/Sobre'
 import OrcamentoPublico from './pages/site/Orcamento'
 import Contato from './pages/site/Contato'
-import Login from './pages/crm/Login'
-import Dashboard from './pages/crm/Dashboard'
-import Clientes from './pages/crm/Clientes'
-import Orcamentos from './pages/crm/Orcamentos'
-import OrcamentoForm from './pages/crm/OrcamentoForm'
-import OrcamentoDetalhe from './pages/crm/OrcamentoDetalhe'
-import Agenda from './pages/crm/Agenda'
-import Solicitacoes from './pages/crm/Solicitacoes'
 import NotFound from './pages/NotFound'
+
+// O CRM só é baixado por quem entra nele; o visitante do site carrega menos código.
+const Login = lazy(() => import('./pages/crm/Login'))
+const Dashboard = lazy(() => import('./pages/crm/Dashboard'))
+const Clientes = lazy(() => import('./pages/crm/Clientes'))
+const Orcamentos = lazy(() => import('./pages/crm/Orcamentos'))
+const OrcamentoForm = lazy(() => import('./pages/crm/OrcamentoForm'))
+const OrcamentoDetalhe = lazy(() => import('./pages/crm/OrcamentoDetalhe'))
+const Agenda = lazy(() => import('./pages/crm/Agenda'))
+const Solicitacoes = lazy(() => import('./pages/crm/Solicitacoes'))
 
 function ProtectedRoute({ children }) {
   const { isAuthenticated, loading } = useAuth()
@@ -43,6 +46,7 @@ export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+        <Suspense fallback={<div className="min-h-screen bg-ink-50" />}>
         <Routes>
           <Route path="/" element={<SitePage><Home /></SitePage>} />
           <Route path="/servicos" element={<SitePage><Servicos /></SitePage>} />
@@ -63,6 +67,7 @@ export default function App() {
 
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </AuthProvider>
   )

@@ -119,23 +119,28 @@ export const process = [
   },
 ]
 
-export const testimonials = [
+// Trabalhos reais do portfólio da RD (flyer "Portfólio — Conheça alguns dos nossos trabalhos").
+// Antes havia depoimentos com nomes genéricos, sem cliente real por trás: foram retirados.
+export const cases = [
   {
-    name: 'Condomínio Residencial Jardim',
-    role: 'Síndica profissional — Tubarão',
-    text: 'A RD assumiu as áreas comuns do nosso condomínio e a diferença foi imediata. Equipe pontual, organizada e muito atenciosa com os moradores.',
+    name: 'Edifício Vila Mendonça',
+    tag: 'Pós-obra · 2022',
+    text: 'Nosso primeiro grande projeto: limpeza pós-obra completa de 22 apartamentos, 5 halls de entrada, acessos, áreas externas dos andares, garagem, salão de festas e salas comerciais do prédio.',
   },
   {
-    name: 'Construtora Vale Sul',
-    role: 'Coordenadora de entregas',
-    text: 'Trabalhamos com a RD em todas as entregas de pós-obra. O acabamento é impecável e eles cumprem o prazo mesmo em obras grandes.',
+    name: 'Casa Nandi',
+    tag: 'Fachada e vidros',
+    text: 'Limpeza de fachada e vidros, valorizando a marca da loja, e lavagem completa do teto da entrada para receber os clientes com um ambiente limpo e seguro.',
   },
   {
-    name: 'Clínica Bem Estar',
-    role: 'Administradora',
-    text: 'Precisávamos de limpeza diária com padrão de higienização clínica. A RD montou o plano, treinou a equipe e hoje temos total tranquilidade.',
+    name: 'Zezé Presentes · Capivari de Baixo',
+    tag: 'Pós-obra e inauguração',
+    text: 'Limpeza pós-obra completa e limpeza de inauguração da loja, deixando cada detalhe pronto para receber os clientes no primeiro dia.',
   },
 ]
+
+// Avaliações reais ficam no Perfil da Empresa no Google.
+export const googleReviewsUrl = 'https://www.google.com/maps/place/RD+Limpezas+Ltda./@-28.4802741,-49.0054121,17z/data=!4m6!3m5!1s0x95214321a2d1ad87:0x7c2a7453d40de2f5!8m2!3d-28.4802741!4d-49.0054121'
 
 export const faq = [
   {

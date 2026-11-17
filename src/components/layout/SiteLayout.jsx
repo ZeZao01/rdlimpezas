@@ -199,11 +199,70 @@ function Footer() {
   )
 }
 
+// Título e descrição por página (antes todas tinham o mesmo título, ruim para o Google).
+const PAGE_META = {
+  '/': {
+    title: 'RD Limpezas | Limpeza profissional em Tubarão e região',
+    description:
+      'Limpeza residencial, empresarial, pós-obra, condomínios, vidros e terceirização em Tubarão, Laguna, Capivari de Baixo e região. Orçamento gratuito.',
+  },
+  '/servicos': {
+    title: 'Serviços de limpeza em Tubarão | RD Limpezas',
+    description:
+      'Limpeza residencial, empresarial e comercial, terceirização, condomínios, pós-obra, vidros e áreas externas em Tubarão e região.',
+  },
+  '/sobre': {
+    title: 'Sobre a RD Limpezas | Limpeza e conservação em Tubarão',
+    description: 'Conheça a RD Limpezas: equipe preparada, trabalhos realizados e atendimento em Tubarão e região.',
+  },
+  '/orcamento': {
+    title: 'Orçamento de limpeza gratuito | RD Limpezas',
+    description: 'Peça seu orçamento de limpeza sem compromisso. Atendemos empresas, condomínios, construtoras e residências.',
+  },
+  '/contato': {
+    title: 'Contato e WhatsApp | RD Limpezas Tubarão',
+    description: 'Fale com a RD Limpezas pelo WhatsApp, telefone ou Instagram. Centro de Tubarão, SC.',
+  },
+}
+
+function setMeta(name, content) {
+  let tag = document.querySelector(`meta[name="${name}"]`)
+  if (!tag) {
+    tag = document.createElement('meta')
+    tag.setAttribute('name', name)
+    document.head.appendChild(tag)
+  }
+  tag.setAttribute('content', content)
+}
+
+function WhatsAppFloat() {
+  return (
+    <a
+      href="https://wa.me/5548991097803?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar com a RD Limpezas no WhatsApp"
+      className="fixed z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#128C7E]"
+      style={{
+        right: 'calc(1.25rem + env(safe-area-inset-right, 0px))',
+        bottom: 'calc(1.25rem + env(safe-area-inset-bottom, 0px))',
+      }}
+    >
+      <svg viewBox="0 0 32 32" className="h-7 w-7" fill="currentColor" aria-hidden="true">
+        <path d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A12.95 12.95 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.67c-2 0-3.95-.54-5.65-1.56l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.63 10.63 0 0 1 5.37 16c0-5.88 4.79-10.66 10.67-10.66S26.7 10.12 26.7 16s-4.79 10.67-10.66 10.67Zm5.85-7.98c-.32-.16-1.9-.94-2.19-1.04-.3-.11-.51-.16-.72.16-.21.32-.83 1.04-1.01 1.25-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.58-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.62-.53-.54-.72-.55h-.62c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.15 3.09 1.31 3.3c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z" />
+      </svg>
+    </a>
+  )
+}
+
 export default function SiteLayout({ children }) {
   const { pathname } = useLocation()
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' })
+    const meta = PAGE_META[pathname] ?? PAGE_META['/']
+    document.title = meta.title
+    setMeta('description', meta.description)
   }, [pathname])
 
   return (
@@ -211,6 +270,7 @@ export default function SiteLayout({ children }) {
       <Navbar />
       <main className="flex-1 pt-[72px]">{children}</main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   )
 }

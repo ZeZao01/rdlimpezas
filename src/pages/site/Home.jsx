@@ -15,7 +15,7 @@ import {
   IconUsers,
   IconWhatsApp,
 } from '../../components/ui/Icons'
-import { differentials, faq, process, services, testimonials } from '../../data/site'
+import { cases, differentials, faq, googleReviewsUrl, process, services } from '../../data/site'
 import { useReveal } from '../../hooks/useReveal'
 
 const iconMap = {
@@ -265,33 +265,34 @@ function TestimonialsSection() {
   return (
     <section className="bg-brand-50/50 py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="reveal max-w-2xl">
-          <p className="text-sm font-bold uppercase tracking-wider text-brand-600">Depoimentos</p>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
-            Quem confia na RD recomenda
-          </h2>
+        <div className="reveal flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-sm font-bold uppercase tracking-wider text-brand-600">Portfólio</p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl">
+              Alguns dos nossos trabalhos
+            </h2>
+          </div>
+          <a
+            href={googleReviewsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-bold text-brand-700 hover:text-brand-800"
+          >
+            Ver avaliações no Google →
+          </a>
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {testimonials.map((item, index) => (
-            <figure
+          {cases.map((item, index) => (
+            <article
               key={item.name}
               className="reveal rounded-3xl border border-ink-100 bg-white p-7 shadow-card"
               style={{ transitionDelay: `${index * 80}ms` }}
             >
-              <div className="flex gap-1 text-sun-400" aria-label="Avaliação 5 de 5">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <svg key={i} className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
-                  </svg>
-                ))}
-              </div>
-              <blockquote className="mt-4 text-sm leading-relaxed text-ink-600">“{item.text}”</blockquote>
-              <figcaption className="mt-5 border-t border-ink-100 pt-4">
-                <p className="text-sm font-bold text-ink-900">{item.name}</p>
-                <p className="text-xs text-ink-500">{item.role}</p>
-              </figcaption>
-            </figure>
+              <p className="text-xs font-bold uppercase tracking-wider text-brand-600">{item.tag}</p>
+              <h3 className="mt-2 text-lg font-extrabold text-ink-900">{item.name}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink-600">{item.text}</p>
+            </article>
           ))}
         </div>
       </div>
